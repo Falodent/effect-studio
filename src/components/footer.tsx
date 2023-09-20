@@ -4,6 +4,7 @@ import Send from "@/assets/icons/svg/paper-plane.svg";
 import Fb from "@/assets/icons/svg/facebook-w.svg";
 import X from "@/assets/icons/svg/twitter-x.svg";
 import Ig from "@/assets/icons/svg/instagram-w.svg";
+import Link from "next/link";
 
 function Footer() {
   return (
@@ -12,7 +13,7 @@ function Footer() {
         <ul className="text-black text-base font-bold">
           Main Menu
           <li className="mt-6 text-black text-sm font-normal cursor-pointer">
-            Home
+            <Link href="/">Home</Link>
           </li>
           <li className="mt-4 text-black text-sm font-normal cursor-pointer">
             T-shirts

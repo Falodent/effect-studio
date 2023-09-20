@@ -3,7 +3,7 @@ import Fb from "@/assets/icons/svg/facebook-f.svg";
 import X from "@/assets/icons/svg/twitter.svg";
 import Ig from "@/assets/icons/svg/instagram.svg";
 
-function Social() {
+function SocialNetworks() {
   return (
     <div className="w-full px-4 py-10 md:px-5 md:py-20 lg:p-20 h-auto grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-10">
       <div className="relative">
@@ -56,4 +56,4 @@ function Social() {
     </div>
   );
 }
-export default Social;
+export default SocialNetworks;

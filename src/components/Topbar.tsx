@@ -3,7 +3,7 @@ import Image from "next/image";
 import World from "@/assets/icons/svg/globe.svg";
 import Down from "@/assets/icons/svg/down-w.svg";
 
-function Top() {
+function Topbar() {
   return (
     <div className="w-full h-[32px] grid grid-cols-[20%,auto,20%] md:grid-cols-[15%,auto,20%] bg-[#111112]">
       <div className="bg-white bg-opacity-[0.08] h-[32px] flex items-center justify-center gap-1">
@@ -23,4 +23,4 @@ function Top() {
     </div>
   );
 }
-export default Top;
+export default Topbar;

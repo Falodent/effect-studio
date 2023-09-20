@@ -1,26 +1,25 @@
-import Box from "@/components/box";
-import Hero from "@/components/hero";
-import Nav from "@/components/nav";
-import Top from "@/components/top";
-import Social from "@/components/social";
+import Box from "@/components/Box";
+import IndexHero from "@/components/IndexHero";
+import Topbar from "@/components/Topbar";
 import Image from "next/image";
-import Leagues from "@/components/leagues";
+import Leagues from "@/components/Leagues";
 import Truck from "@/assets/icons/png/truck-box.png";
 import Phone from "@/assets/icons/png/phone-box.png";
 import Whatsapp from "@/assets/icons/png/whatsapp-box.png";
 import Reward from "@/assets/icons/png/rewards-box.png";
 import Badge from "@/assets/icons/svg/reward.svg";
-import Collection from "@/components/collection";
-import Footer from "@/components/footer";
-import Popular from "@/components/popular";
-import ScrollingContainer from "@/components/Scroll";
+import Collection from "@/components/Collections";
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
+import PopularProducts from "@/components/PopularProducts";
+import SocialNetworks from "@/components/SocialNetworks";
 
 const Home = () => {
   return (
     <div className="w-full">
-      <Top />
-      <Nav />
-      <Hero />
+      <Topbar />
+      <Navbar active="border-primary border-b-2 pt-2 pb-1"/>
+      <IndexHero />
 
       <div className="m-4 md:mt-10 md:mx-5 lg:mx-10 grid grid-cols-2 md:grid-cols-4 gap-4">
         <Box image={Truck} text="Secure Shipping" sub="on all orders" />
@@ -41,10 +40,10 @@ const Home = () => {
         <Image src={Badge} alt="" />
       </div>
 
-      <Popular />
+      <PopularProducts />
       <Leagues />
       <Collection />
-      <Social />
+      <SocialNetworks />
       <Footer />
     </div>
   );

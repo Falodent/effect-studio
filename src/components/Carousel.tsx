@@ -4,6 +4,7 @@ import Image, { StaticImageData } from "next/image";
 import React, { useRef } from "react";
 import Left from "@/assets/icons/svg/left.svg";
 import Right from "@/assets/icons/svg/right.svg";
+import Link from "next/link";
 
 type SliderProps = {
   data: Array<{
@@ -15,7 +16,7 @@ type SliderProps = {
   }>;
 };
 
-const ScrollingContainer = ({ data }: SliderProps) => {
+const CarouselContainer = ({ data }: SliderProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   const scrollLeft = () => {
@@ -65,9 +66,12 @@ const ScrollingContainer = ({ data }: SliderProps) => {
                   ) : null}
                 </div>
                 <div className="w-full h-[100px] p-4 flex flex-col gap-2 border-b-[1px] border-x-[1px] border-[#EAEAEC]">
-                  <p className="text-sm text-[#393A38] h-9 flex items-center">
+                  <Link
+                    href="/product"
+                    className="text-sm text-[#393A38] h-9 flex items-center hover:text-base"
+                  >
                     {items.product}
-                  </p>
+                  </Link>
                   <div className="flex gap-2 items-center">
                     <p className="text-xl font-bold text-black">
                       €{items.price}
@@ -88,4 +92,4 @@ const ScrollingContainer = ({ data }: SliderProps) => {
   );
 };
 
-export default ScrollingContainer;
+export default CarouselContainer;

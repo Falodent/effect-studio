@@ -5,7 +5,7 @@ import Bag from "@/assets/icons/png/bag.png";
 import Server from "@/server/Global";
 import Image from "next/image";
 
-function Hero() {
+function IndexHero() {
   const [banners, setBanners] = useState<any>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [background, setBackground] = useState("");
@@ -79,4 +79,4 @@ function Hero() {
     </div>
   );
 }
-export default Hero;
+export default IndexHero;

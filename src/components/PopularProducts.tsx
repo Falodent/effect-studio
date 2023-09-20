@@ -1,7 +1,7 @@
-import ScrollingContainer from "./Scroll";
+import CarouselContainer from "./Carousel";
 import image from "@/assets/images/product-large.jpg";
 
-function Popular() {
+function PopularProducts() {
   const SlideItems = [
     {
       image: image,
@@ -54,9 +54,9 @@ function Popular() {
       </p>
 
       <div className="w-full">
-        <ScrollingContainer data={SlideItems}/>
+        <CarouselContainer data={SlideItems}/>
       </div>
     </div>
   );
 }
-export default Popular;
+export default PopularProducts;
