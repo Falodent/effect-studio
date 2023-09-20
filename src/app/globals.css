@@ -2,26 +2,61 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.custom-bg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@media (max-width: 767px) {
+  .custom-bg {
+    background-position: right;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.custom-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(90deg, #111112 0%, rgba(17, 17, 18, 0) 100%);
+}
+
+.backdrop {
+  backdrop-filter: blur(8px);
+}
+
+.jersey-bg {
+  background-image: url("../assets/images/personalization.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Slider CSS Override */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.slick-prev {
+  display: none !important;
+}
+
+.slick-slide {
+  width: 240px !important;
+  margin-right: 32px;
+}
+
+.slick-list {
+  overflow: unset !important;
+}
+
+.slick-track {
+  min-width: 1700px !important;
+}
+
+.slick-slider {
+  position: unset !important;
 }
